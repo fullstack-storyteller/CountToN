@@ -3,77 +3,106 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.table {
+  margin-top: 1%;
+}
+.card {
+  display: block;
+  padding: 0.5%;
+}
 .circle {
-  border: 1px solid #333;
+  border: 2px solid rgb(180, 241, 151);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  /* margin: 0 auto; */
-  /* margin-top: 7%; */
-  /* margin-left: 3%; */
-
-  display: inline-block;
   position: relative;
+  z-index: -10;
+  display: inline-block;
 }
-.table {
-  margin-top: 2%;
-}
-.card {
-  display: block;
-}
-.dial {
-  border: 1px solid #333;
-  background: #333;
+.circle::after {
+  content: '';
+  background: red;
   position: absolute;
-}
-
-.dial-0 {
-  margin-left: 60px;
-  height: 60px;
-}
-.dial-15 {
-  width: 60px;
-  margin-left: 60px;
   top: 50%;
+  left: 50%;
+  width: 3%;
+  height: 3%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
+.needle-big {
+  display: initial;
+  background: rgb(63, 32, 32);
+  position: absolute;
+  height: 50%;
+  width: 2.25%;
+  left: 48.8%;
+  transform-origin: 50% 100%;
+  transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  transition: transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  -moz-transition: transform 1s linear;
+  -ms-transition: transform 1s linear;
+  -o-transition: transform 1s linear;
+  z-index: 5;
+}
+/*
+IMPORTANT NOTE
+different between animation and transition:
+Animation is like a loop, you have to careful about the 
+position from where and you start an animation and where you end an animation, this is break the spontenity of the animation if not done properly
 
-.dial-30 {
-  top: 50%;
-  height: 60px;
-  margin-left: 60px;
-}
+Transition is a change in motion, the final result will be different than then the intial
+*/
+/*animation: rotate 2s linear;
+  -webkit-animation: rotate 2s;
+  transition: all 1s;
+  ,-this will cause issue in rotation.so be specific while doing transition*/
 
-.dial-45 {
-  top: 50%;
-  width: 60px;
-}
-.dial-angle-45 {
-  width: 60px;
-  margin-left: 100px;
-  transform: rotate(-40deg) translate(-100%, 50%);
-  -webkit-transform: rotate(-40deg) translate(-100%, 50%);
-  -moz-transform: rotate(-40deg) translate(-100%, 50%);
-  -ms-transform: rotate(-40deg) translate(-100%, 50%);
-  -o-transform: rotate(-40deg) translate(-100%, 50%);
-}
-.dial-angle-full-45 {
-  width: 120px;
-  margin-left: 60px;
-  transform: rotate(-45deg) translate(-50%);
-  -webkit-transform: rotate(-45deg) translate(-70%, 50%);
-  -moz-transform: rotate(-45deg) translate(-50);
-  -ms-transform: rotate(-45deg) translate(-50);
-  -o-transform: rotate(-45deg) translate(-50);
-}
+/*animation: rotate 60s (how much time to take to rotate) infinite(how many times to do full animation) linear/steps(60) (how to do rotation default starting and slowing down, linear: same speed always, steps: how many step to complete the single rotation);*/
+/* @keyframes rotate {
+  100% {
+    transform: rotateZ(60deg);
+    -webkit-transform: rotateZ(60deg);
+    -moz-transform: rotateZ(60deg);
+    -ms-transform: rotateZ(60deg);
+    -o-transform: rotateZ(60deg);
+  }
+} */
 
-.dial-full-0 {
-  margin-left: 60px;
-  height: 120px; /*double the height*/
-}
-.dial-full-15 {
-  width: 120px; /*double the width*/
-  top: 50%;
+.needle-small {
+  display: initial;
+  background: rgb(45, 148, 243);
+  position: absolute;
+  top: 21%;
+  left: 48.5%;
+  transform-origin: 49% 100%;
+  height: 30%;
+  width: 2.5%;
+  transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  transition: transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  -moz-transition: transform 1s linear;
+  -ms-transition: transform 1s linear;
+  -o-transition: transform 1s linear;
+  z-index: 6;
 }
