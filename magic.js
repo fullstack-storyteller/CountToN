@@ -205,7 +205,7 @@ const mappings = [
   ],
 ];
 
-const limit = 10;
+const limit = 9;
 const circleRadius = 30;
 const marginPercentageBtwnCircles = 1;
 
