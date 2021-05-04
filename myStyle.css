@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.circle {
+  border: 1px solid #333;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /* margin: 0 auto; */
+  /* margin-top: 7%; */
+  /* margin-left: 3%; */
+
+  display: inline-block;
+  position: relative;
+}
+.table {
+  margin-top: 2%;
+}
+.card {
+  display: block;
+}
+.dial {
+  border: 1px solid #333;
+  background: #333;
+  position: absolute;
+}
+
+.dial-0 {
+  margin-left: 60px;
+  height: 60px;
+}
+.dial-15 {
+  width: 60px;
+  margin-left: 60px;
+  top: 50%;
+}
+
+.dial-30 {
+  top: 50%;
+  height: 60px;
+  margin-left: 60px;
+}
+
+.dial-45 {
+  top: 50%;
+  width: 60px;
+}
+.dial-angle-45 {
+  width: 60px;
+  margin-left: 100px;
+  transform: rotate(-40deg) translate(-100%, 50%);
+  -webkit-transform: rotate(-40deg) translate(-100%, 50%);
+  -moz-transform: rotate(-40deg) translate(-100%, 50%);
+  -ms-transform: rotate(-40deg) translate(-100%, 50%);
+  -o-transform: rotate(-40deg) translate(-100%, 50%);
+}
+.dial-angle-full-45 {
+  width: 120px;
+  margin-left: 60px;
+  transform: rotate(-45deg) translate(-50%);
+  -webkit-transform: rotate(-45deg) translate(-70%, 50%);
+  -moz-transform: rotate(-45deg) translate(-50);
+  -ms-transform: rotate(-45deg) translate(-50);
+  -o-transform: rotate(-45deg) translate(-50);
+}
+
+.dial-full-0 {
+  margin-left: 60px;
+  height: 120px; /*double the height*/
+}
+.dial-full-15 {
+  width: 120px; /*double the width*/
+  top: 50%;
+}
