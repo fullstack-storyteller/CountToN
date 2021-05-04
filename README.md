@@ -1,4 +1,6 @@
 # CountToN
+## Project is live at:
+https://fullstack-storyteller.github.io/CountToN/index.html
 ## What it does?
 This small project currently counts to 9 and displays in by animating a collection of clocks.
 
