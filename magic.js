@@ -230,6 +230,9 @@ const rotateNeedle = (row, col, whichNeedle, angle) => {
     document
       .querySelector(`#circle-${row}${col} .needle-${whichNeedle}`)
       .style.setProperty('transform', `rotateZ(${angle}deg)`);
+    document
+      .querySelector(`#circle-${row}${col} .needle-${whichNeedle}`)
+      .style.setProperty('display', `initial`);
   }
 };
 
@@ -249,3 +252,16 @@ const showNum = function (num) {
   }
 };
 // showNum(0);
+let number = 0;
+
+const start = () => {
+  showNum(number);
+  number++;
+  stop();
+};
+let interval = setInterval(start, 2500);
+const stop = () => {
+  if (number === 10) {
+    clearInterval(interval);
+  }
+};
