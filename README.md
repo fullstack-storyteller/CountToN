@@ -9,3 +9,5 @@ This small project currently counts to 9 and displays in by animating a collecti
 * Ability to handle more number of digits, preferably less than 3
 * A better UI
 * User should be able to control the upper limit for count
+
+### Do reach out to me with critic, collaboration and general chit-chat @ manish.aec2012@gmail.com
